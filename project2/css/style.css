@@ -1,0 +1,121 @@
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #20262E;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+body .container {
+  max-width: 200vh;
+}
+body .container .phone {
+  display: none;
+}
+body .container header {
+  background: transprent;
+  padding: 20px;
+  box-shadow: 0px 10px 15px -5px inset rgba(255, 255, 255, 0.2), 0 0px 20px -5px rgba(0, 0, 0, 0.2);
+}
+body .container header ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .container header ul li {
+  list-style: none;
+  width: clamp(110px, 50%, 150px);
+  transition: transform 0.8s ease-out;
+}
+body .container header ul li a {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  font-weight: 900;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+body .container header ul li ::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: all 0.8s ease-out;
+  transform-origin: left;
+}
+body .container header ul li ::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: all 0.8s ease-out;
+  transform-origin: right;
+}
+body .container header ul li:hover ::before,
+body .container header ul li:hover ::after {
+  transform: scaleX(1);
+}
+body .container .content {
+  max-width: 100%;
+  height: 900px;
+}
+body .container .content .profile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .container .content .profile ul {
+  transition: all 3s ease-in-out;
+  width: 50%;
+  margin: 0;
+}
+body .container .content .profile ul li {
+  list-style: none;
+  width: 100%;
+  height: auto;
+}
+body .container .content .profile ul .click {
+  height: 30px;
+}
+body .container .content ::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  background-image: url(./img/messi1.png);
+  background-size: 100% 100%;
+  bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background: white;
+  }
+  body .container .phone {
+    display: block;
+    width: 100vh;
+    height: 100vh;
+  }
+  body .container .phone i {
+    display: block;
+    color: black;
+    width: 50%;
+    height: 50%;
+  }
+  body .container header {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
